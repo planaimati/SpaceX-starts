@@ -6,6 +6,6 @@ To run this project locally node.js is required.
 
 ## How to build and run project:
 
-- clone repository using command: git clone https://github.com/planaimati/fullstack-recruitment-challenge.git
+- clone repository using command: git clone https://github.com/planaimati/SpaceX-starts.git
 - install dependencies by using command: npm install
 - run app by using command: npm start

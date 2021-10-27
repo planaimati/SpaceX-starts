@@ -8,6 +8,7 @@ export const AppContextProvider = ({ children }) => {
   const [missions, setMissions] = useState([]);
   const [counter, setCounter] = useState(0);
 
+  //pobieranie danych z APi
   const { data, loading, error } = useQuery(FILMS_QUERY);
 
   useEffect(() => {
@@ -18,12 +19,33 @@ export const AppContextProvider = ({ children }) => {
 
   if (error) return `Error! ${error.message}`;
 
-  //pobieranie danych z APi
+  //counter
+
+  const increaseCounter = () => {
+    
+
+    if (missions.launchesPast.length - 1 === counter) {
+      return;
+    } else {
+      setCounter((prevState) => prevState + 1);
+    }
+  };
+  const decreaseCounter = () => {
+    
+    if (counter === 0) {
+      return;
+    } else {
+      setCounter((prevState) => prevState - 1);
+    }
+  };
 
   return (
     <AppContext.Provider
       value={{
         missions,
+        counter,
+        increaseCounter,
+        decreaseCounter,
       }}
     >
       {children}

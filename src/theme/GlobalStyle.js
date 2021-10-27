@@ -16,7 +16,7 @@ html {
     margin: 0;
     padding: 0;
     font-size: 1.6rem;
-    height: 100vh;
+    min-height: 110vh;
     width: 100%;
     overflow-X: hidden;
     font-family: 'Roboto', sans-serif;
